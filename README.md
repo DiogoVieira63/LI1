@@ -15,14 +15,14 @@ alt="EXCITEBIKE" width="333" height="250" border="20" /></a>
 
 O projeto foi dividido em  **2 Fases, 3 Tarefas** cada: 
 ### [1. Fase]():
-- ##### [TAREFA 1](https://github.com/diogovieira63/UNI/blob/master/1%C2%BAano/1%C2%BASemestre/LI1/Tarefa1.hs) (GERAR MAPAS )
-- ##### [TAREFA 2](https://github.com/diogovieira63/UNI/blob/master/1%C2%BAano/1%C2%BASemestre/LI1/Tarefa2.hs) (EFETUAR JOGADAS)
-- ##### [TAREFA 3](https://github.com/diogovieira63/UNI/blob/master/1%C2%BAano/1%C2%BASemestre/LI1/Tarefa3.hs) (DESCONSTRUIR MAPAS)
+- ##### [TAREFA 1] (GERAR MAPAS )
+- ##### [TAREFA 2](EFETUAR JOGADAS)
+- ##### [TAREFA 3] (DESCONSTRUIR MAPAS)
 
 ### [2.Fase]():
-- ##### [TAREFA 4](https://github.com/diogovieira63/UNI/blob/master/1%C2%BAano/1%C2%BASemestre/LI1/Tarefa4.hs) (REAGIR À PASSAGEM DO TEMPO)
-- ##### [TAREFA 5](https://github.com/diogovieira63/UNI/blob/master/1%C2%BAano/1%C2%BASemestre/LI1/Tarefa5.hs) (IMPLEMENTAÇÃO DO JOGO EM GLOSS)
-- ##### [TAREFA 6](https://github.com/diogovieira63/UNI/blob/master/1%C2%BAano/1%C2%BASemestre/LI1/Tarefa6.hs) (IMPLEMENTAR O BOT)
+- ##### [TAREFA 4] (REAGIR À PASSAGEM DO TEMPO)
+- ##### [TAREFA 5](IMPLEMENTAÇÃO DO JOGO EM GLOSS)
+- ##### [TAREFA 6](IMPLEMENTAR O BOT)
 
 
 ## RESULTADO FINAL 
