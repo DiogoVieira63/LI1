@@ -15,14 +15,14 @@ alt="EXCITEBIKE" width="333" height="250" border="20" /></a>
 
 O projeto foi dividido em  **2 Fases, 3 Tarefas** cada: 
 ### [1. Fase]():
-- ##### [TAREFA 1] (GERAR MAPAS )
-- ##### [TAREFA 2](EFETUAR JOGADAS)
-- ##### [TAREFA 3] (DESCONSTRUIR MAPAS)
+- ##### [TAREFA 1](https://github.com/DiogoVieira63/LI1/blob/master/Tarefa1.hs) (GERAR MAPAS )
+- ##### [TAREFA 2](https://github.com/DiogoVieira63/LI1/blob/master/Tarefa2.hs)(EFETUAR JOGADAS)
+- ##### [TAREFA 3](https://github.com/DiogoVieira63/LI1/blob/master/Tarefa3.hs) (DESCONSTRUIR MAPAS)
 
 ### [2.Fase]():
-- ##### [TAREFA 4] (REAGIR À PASSAGEM DO TEMPO)
-- ##### [TAREFA 5](IMPLEMENTAÇÃO DO JOGO EM GLOSS)
-- ##### [TAREFA 6](IMPLEMENTAR O BOT)
+- ##### [TAREFA 4](https://github.com/DiogoVieira63/LI1/blob/master/Tarefa4.hs) (REAGIR À PASSAGEM DO TEMPO)
+- ##### [TAREFA 5](https://github.com/DiogoVieira63/LI1/blob/master/Tarefa5.hs)(IMPLEMENTAÇÃO DO JOGO EM GLOSS)
+- ##### [TAREFA 6](https://github.com/DiogoVieira63/LI1/blob/master/Tarefa6.hs)(IMPLEMENTAR O BOT)
 
 
 ## RESULTADO FINAL 
