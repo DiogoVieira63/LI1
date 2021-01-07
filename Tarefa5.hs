@@ -92,14 +92,14 @@ import Graphics.Gloss
 import Graphics.Gloss.Interface.Pure.Game
 import Graphics.Gloss.Juicy
 import LI11920
-import Tarefa1_2019li1g107
-import Tarefa2_2019li1g107
-import Tarefa4_2019li1g107
-import Tarefa0_2019li1g107
+import Tarefa1
+import Tarefa2
+import Tarefa4
+import Tarefa0
 import Mapas
 import Data.Digits
 import Data.Maybe
-import Tarefa6_2019li1g107
+import Tarefa6
 -- | Função principal da Tarefa 5.
 -- | __NB:__ Esta Tarefa é completamente livre. Deve utilizar a biblioteca <http://hackage.haskell.org/package/gloss gloss> para animar o jogo, e reutilizar __de forma completa__ as funções das tarefas anteriores.
 main :: IO ()

@@ -29,12 +29,12 @@ raciocínio e a nossa capacidade de analisar estratégias e situações vantajos
 -}
 
 -- Este módulo define funções comuns da Tarefa 6 do trabalho prático.
-module Tarefa6_2019li1g107 where
-import Tarefa0_2019li1g107
-import Tarefa1_2019li1g107
-import Tarefa2_2019li1g107
-import Tarefa3_2019li1g107
-import Tarefa4_2019li1g107
+module Tarefa6 where
+import Tarefa0
+import Tarefa1
+import Tarefa2
+import Tarefa3
+import Tarefa4
 import LI11920
 
 -- * Funções principais da Tarefa 6.

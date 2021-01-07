@@ -20,12 +20,12 @@ Por outro lado a nossa qualidade de código não está como desejamos porque nã
 -}
 
 -- Este módulo define funções comuns da Tarefa 4 do trabalho prático.
-module Tarefa4_2019li1g107 where
+module Tarefa4 where
 
 import LI11920
-import Tarefa0_2019li1g107
-import Tarefa2_2019li1g107
-import Tarefa1_2019li1g107
+import Tarefa0
+import Tarefa2
+import Tarefa1
 
 -- * Testes
 -- | Testes unitários da Tarefa 4.

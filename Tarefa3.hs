@@ -60,11 +60,11 @@ melhor aproveitamento.
 
 
 -- Este módulo define funções comuns da Tarefa 3 do trabalho prático.
-module Tarefa3_2019li1g107 where
+module Tarefa3 where
 
 import LI11920
-import Tarefa1_2019li1g107
-import Tarefa2_2019li1g107
+import Tarefa1
+import Tarefa2
 import Data.List
 -- * Testes
 

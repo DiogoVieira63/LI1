@@ -1,6 +1,6 @@
 -- | Este módulo define funções genéricas sobre vetores e matrizes, que serão úteis na resolução do trabalho prático.
 
-module Tarefa0_2019li1g107 where
+module Tarefa0 where
 
 -- Funções não-recursivas.
 

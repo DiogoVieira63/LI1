@@ -32,11 +32,11 @@ condicionais e uma simplificação de código ineficiente.
 
 
 -- Este módulo define funções comuns da Tarefa 2 do trabalho prático.
-module Tarefa2_2019li1g107 where
+module Tarefa2 where
 
 import LI11920
-import Tarefa0_2019li1g107
-import Tarefa1_2019li1g107
+import Tarefa0
+import Tarefa1
 
 -- * Testes
 testesT2 :: [(Int,Jogada,Estado)]

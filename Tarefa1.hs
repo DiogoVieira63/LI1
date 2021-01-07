@@ -47,7 +47,7 @@ que conseguimos responder ao que nos era pedido.
 
 --- | Este módulo define funções comuns da Tarefa 1 do trabalho prático.
 
-module Tarefa1_2019li1g107 where
+module Tarefa1 where
 
 import LI11920
 import System.Random

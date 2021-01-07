@@ -1,6 +1,6 @@
 module Mapas where
 import LI11920
-import Tarefa1_2019li1g107
+import Tarefa1
 import Data.Digits
 
 
