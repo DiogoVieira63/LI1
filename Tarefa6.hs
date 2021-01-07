@@ -28,7 +28,7 @@ raciocínio e a nossa capacidade de analisar estratégias e situações vantajos
 
 -}
 
--- | Este módulo define funções comuns da Tarefa 6 do trabalho prático.
+-- Este módulo define funções comuns da Tarefa 6 do trabalho prático.
 module Tarefa6_2019li1g107 where
 import Tarefa0_2019li1g107
 import Tarefa1_2019li1g107
@@ -36,10 +36,9 @@ import Tarefa2_2019li1g107
 import Tarefa3_2019li1g107
 import Tarefa4_2019li1g107
 import LI11920
-import Data.List
 
 -- * Funções principais da Tarefa 6.
-{-
+
 -- | Define um ro'bot' capaz de jogar autonomamente o jogo.
 bot :: Int          -- ^ O identificador do 'Jogador' associado ao ro'bot'.
     -> Estado       -- ^ O 'Estado' para o qual o ro'bot' deve tomar uma decisão.
@@ -120,73 +119,4 @@ decisaoar j m | i - (inclinacao p) < 15   = Just (Movimenta E)
               | i - (inclinacao p) > 15   = Just (Movimenta D)
               | otherwise                 = Nothing 
               where i = inclinacaoJogador (estadoJogador j)
-                    p = peca j m -}
-
-
-
-{--ESTRATÉGIA: - FAZER COM QUE O BOT ANTECIPE AS JOGADAS DOS ADVERSÁRIOS 
-               - VER ATÉ AO FINAL DA PISTA
-               - TER EM CONTA A VELOCIDADE
-               - CALCULOS SOBRE A DISTÂNCIA PERCORRIDA NO AR
-               - DISPARAR QUANDO JOGADOR ESTIVER ATRÁS
-               - FUGIR DOS PIORES PISOS
-               - USAR AS RAMPAS PARA EVITAR OS PIORES PISOS 
-               - VER A DISTÂNCIA POSSIVELMENTE ATINGIDA COM O SALTO
-               - QUANDO A DISTÀNCIA DA PEÇA FOR MENOR DO QUE 0,6, O JOGADOR SÓ ACELERA--}
-
--- | Define um ro'bot' capaz de jogar autonomamente o jogo.
-bot :: Int          -- ^ O identificador do 'Jogador' associado ao ro'bot'.
-    -> Estado       -- ^ O 'Estado' para o qual o ro'bot' deve tomar uma decisão.
-    -> Maybe Jogada -- ^ Uma possível 'Jogada' a efetuar pelo ro'bot'.
-bot x (Estado m js) | snd (properFraction (distanciaJogador (mostraJogador x js))) < 0.7 = Just Acelera
-                    | otherwise = Just (Movimenta B)
-
-melhorPistaChao :: Estado -> Int
-melhorPistaChao (Estado m js) = undefined
-
-check4pecas :: Int -> Mapa -> Int -> Mapa
-check4pecas 4 _ _ = []
-check4pecas a m x = [map (encontraIndiceLista x) m] ++ (check4pecas (a+1) m (x + 1))
-
-bestPistas :: Mapa -> [[Int]]
-bestPistas m = map bestAtrito (transpose m)
-
-bestAtrito :: Pista -> [Int]
-bestAtrito p = aux (maximum a) (a)
-            where
-            a = (desdobra (pecatopiso p)0)
-            aux :: (Int,Int) -> [(Int,Int)] -> [Int]
-            aux _ [] = []
-            aux (x,y) ((a,b):t) | x == a = [b] ++ (aux (x,y) t)
-                                | otherwise = (aux (x,y) t)
-
-desdobra :: [Piso] -> Int -> [(Int,Int)]
-desdobra [] _ = []
-desdobra  (h:t) x = [aux h x] ++ (desdobra t (x+1))
-                  where
-                  aux :: Piso -> Int -> (Int,Int)
-                  aux  p x = case p of Terra -> (1,x)
-                                       Relva -> (0,x)
-                                       Lama -> (-1,x)
-                                       Boost -> (3,x)
-                                       Cola -> (-3,x)
-                                       Estrada -> (2,x)
-
--- Função que dá o piso de uma peça
-pecatopiso :: [Peca] -> [Piso]
-pecatopiso [] = []
-pecatopiso ((Rampa p x y):t) = p : pecatopiso t
-pecatopiso ((Recta p x):t)   = p : pecatopiso t
-
-mapaAdapt :: Mapa -> Float -> Mapa
-mapaAdapt m x = map (drop (round x)) m
-
-count :: Eq a => a -> [a] -> Int
-count _ [] = 0
-count x (h:t) | x == h = a+1
-              | otherwise = a
-              where
-              a = count x t
-
---choosePista :: Jogador -> Mapa -> Jogada
---choosePista j m | 
+                    p = peca j m

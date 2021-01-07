@@ -59,7 +59,7 @@ melhor aproveitamento.
 
 
 
--- | Este módulo define funções comuns da Tarefa 3 do trabalho prático.
+-- Este módulo define funções comuns da Tarefa 3 do trabalho prático.
 module Tarefa3_2019li1g107 where
 
 import LI11920

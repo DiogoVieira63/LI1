@@ -1,4 +1,92 @@
--- | Este módulo define funções comuns da Tarefa 5 do trabalho prático.
+{- |
+
+= Introdução
+
+A tarefa 5 consiste na implementação do gráfico usando a biblioteca Gloss, tendo em conta todas as tarefas precedentes
+bem como a tarefa 6 (implementação do bot).
+
+= Objetivos
+
+Tendo em conta que o Excite Bike foi um jogo que, por ter sido criado numa geração diferente, não fez parte da nossa 
+geração pretendíamos adaptá-lo para algo que nos recordasse dos jogos que jogávamos quando mais novos. Assim, adotamos
+um tema mais próximo de jogos como os presentes em MiniClip.com.
+
+Para a concretização deste design mais apelativo e próximo de traços de cartoon que apreciamos optamos por usar menos
+texto, um tipo de letra mais atual e com traços diferentes dos do Excite Bike original e imagens que por si só refletem
+esta escolha temática. 
+
+Tentamos implementar uma interface intuitiva de forma a que o jogador não tenha que ler grandes quantidades de texto ou 
+perder muito tempo em torno do jogo para entender como este funciona.
+Para cumprir tal objetivo implementamos menús distintos como o Main Menu, um menú para a escolha do mapa e outro para a
+escolha dos jogadores.
+
+Tal como referimos anteriormente, pretendiamos que o nosso jogo, de certa forma se distanciasse do Excite Bike e para isso
+decidimos optar também pela implementação de mini-jogos. 
+
+= Extras do nosso jogo
+
+No nosso jogo implementamos:
+
+- Menús de início de jogo e menús para fim de jogo;
+- Opções de escolha de jogadores;
+- Mapas temáticos com opções de comprimento;
+- Opção de Single Player e MultiPlayer;
+- Implementação de mini-jogos (e níveis de dificuldades);
+
+= Mapas
+
+No nosso jogo decidimos optar por ter mapas temáticos. Neste sentido, escolhemos quatro temas que foram: a cidade, o deserto,
+a montanha e a savana. Todos os mapas têm opções de comprimento de pista de 25, 50 ou 75 peças.  
+
+- A cidade 
+    Os mapas da cidade são constituídos maioritariamente por boost e estrada (piso com atrito 0)
+
+- O deserto
+    Os mapas do deserto são constituídos maioritariamente por terra, boost e cola (representando a areia)
+
+- A montanha 
+    Os mapas da montanha são constituídos maioritariamente por terra, relva e lama.
+
+- A savana
+    Os mapas da savana são constituídos maioritariamente por terra e relva e lama.
+
+= Mini-Jogos
+
+Os mini-jogos que decidimos implementar foram: Go Fast or Die Tryin', Portal Run e Space Jump. Cada um destes mini-jogos
+tem quatro níveis de dificuldade: Fácil, Médio, Difícil e Hardcore.
+
+O Go Fast or Die Tryin' consiste num mini-jogo em que criamos um novo tipo de piso - lava - que no caso de o jogador tocar
+morre. Neste jogo, quanto maior o nível de dificuldade maior a quantidade de peças com o piso em lava.
+
+O Space Jump consiste num jogo em que o jogador se encontra no espaço e pretende alcançar a distância definida por nível.
+Neste caso, um maior nível de dificuldade representa um objetivo de distância maior e/ou o uso de colas para dificultar o
+aumento de velocidade. 
+
+No caso do Portal Run o jogo consiste num jogo futurístico em que criamos um novo piso - o teleporte - que no caso de o 
+jogador estar em contacto com ele, teleporta o mesmo para outra zona do mapa. O aumento de dificuldade representa um aumento
+de peças teleporta desfavoráveis para o jogador. 
+
+= Imagens e recursos
+
+Neste jogos optamos por métodos diferentes de obter e construir imagens. Maioritariamente optamos pelo uso de imagens
+destinadas a uso académico ou sem fins comerciais devido aos direitos de autor. Obtemos essas imagens em sites como o 
+FreePik. Por outro lado consideramos importante referir que o nosso tipo de letra foi obtido online, no website Flaming
+Text. O jogo inclui também imagens editadas pelos membros do grupo através de ferramentas como Microsoft Word e Paint.
+As referências às imagens foram feitas no menú de créditos (opção no menú inicial do jogo)
+
+= Discussão e conclusão
+
+Consideramos que conseguimos desenvolver o jogo de forma positiva e concretizar grande parte das ideias que tínhamos em
+mente. Contudo, vemos no jogo potenciais funcionalidades que enriqueceriam o jogo. 
+
+Nesta tarefa ultrapassamos algumas dificuldades que foram essencialmente a utilização da biblioteca Gloss que, inicialmente, 
+foi desafiante e também problemas técnicos do uso desta biblioteca no Macbook.
+
+Em conclusão, esta tarefa foi bastante desafiante e interessante porque permitiu que transformássemos o nosso jogo tal como
+desejávamos que ele estivesse e nos desenvolveu capacidades criativas. -}
+
+
+-- Este módulo define funções comuns da Tarefa 5 do trabalho prático.
 module Main where
 import Graphics.Gloss
 import Graphics.Gloss.Interface.Pure.Game
@@ -199,8 +287,12 @@ main = do
         reageEventoGloss          -- | reage a um evento
         reageTempoGloss           -- | reage ao passar do tempo
 
+
+
+
+
 data EstadoGloss = EstadoGloss 
-    { tempo :: Int -- | O tempo usado para desenhar o  crómetro fo jogo
+    { tempo :: Int -- | O tempo usado para desenhar o  crómetro do jogo
     , isBot :: Bool -- | Saber se o player 2 é bot ou não
     , jsSelected :: [Int]  -- | Cor dos jogadores selcionados, por ordem
     , estado :: Estado    -- | O 'Estado' do jogo. 
@@ -574,10 +666,6 @@ npl2 x = Translate 0 (-100) x
 -- |Posição do Cronometro
 relog :: Picture -> Picture
 relog x = Translate (-150) (400) x
-
-dado :: Picture -> Picture
-dado x = Translate (-750) (-250) (Scale 0.45 0.45 x)
-
 
 triPlayerMenu :: Picture -> Picture
 triPlayerMenu x = Pictures [(Translate (1050) (-100) x),(Translate (-1100) (0) (Rotate 180 x))]

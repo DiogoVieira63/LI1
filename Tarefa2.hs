@@ -31,7 +31,7 @@ condicionais e uma simplificação de código ineficiente.
 -}
 
 
--- | Este módulo define funções comuns da Tarefa 2 do trabalho prático.
+-- Este módulo define funções comuns da Tarefa 2 do trabalho prático.
 module Tarefa2_2019li1g107 where
 
 import LI11920
@@ -229,7 +229,6 @@ findPeca y (h:t) | y >= 1 = findPeca (y-1) t
 
 -- | Função que devolve a altura da peça.
 altura :: Peca -> (Int,Int)
-altura (Teletransporta _ _) = (0,0)
 altura (Recta _ x) = (x,x)
 altura (Rampa _ x y) = (x,y)
 
